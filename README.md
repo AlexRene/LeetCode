@@ -57,7 +57,7 @@ Cada problema contém:
 
 ## 🛠 Tecnologias
 
-* JavaScript / TypeScript / Python (ajuste aqui)
+* Java e C++
 
 ---
 
