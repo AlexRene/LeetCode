@@ -1,72 +1,48 @@
-# 🧠 LeetCode Journey
+# 📘 LeetCode Journey
 
-Repositório dedicado à minha prática de algoritmos e estruturas de dados no LeetCode.
+## 📊 Progresso Geral
+Total resolvidos: 2 🚀
 
-## 🎯 Objetivo
-
-* Melhorar lógica de programação
-* Preparação para entrevistas técnicas
-* Dominar estruturas de dados e algoritmos
 
 ---
 
 ## 🚀 Progresso por Dificuldade
 
 | Dificuldade | Resolvidos |
-| ----------- | ---------- |
-| 🟢 Easy     | 0          |
-| 🟡 Medium   | 0          |
-| 🔴 Hard     | 0          |
+|------------|-----------|
+| 🟢 Easy | 1 |
+| 🟡 Medium | 0 |
+| 🔴 Hard | 0 |
+
 
 ---
 
-## 🧩 Progresso por Padrões (DSA)
+## 🧩 Progresso por Padrões
 
-| Padrão                 | Problemas Resolvidos |
-| ---------------------- | -------------------- |
-| 🔁 Two Pointers        | 0                    |
-| 🪟 Sliding Window      | 0                    |
-| 🔍 Binary Search       | 0                    |
-| 🌳 Trees (DFS/BFS)     | 0                    |
-| 🧮 Dynamic Programming | 0                    |
-| 🧵 Backtracking        | 0                    |
-| 📊 Greedy              | 0                    |
-| 🗺 Graphs              | 0                    |
+| Padrão | Resolvidos |
+|--------|-----------|
+| Two Pointers | 1 |
+| Sliding Window | 0 |
+| Binary Search | 0 |
+| Trees (DFS/BFS) | 0 |
+| Dynamic Programming | 0 |
+| Backtracking | 0 |
+| Greedy | 0 |
+| Graphs | 0 |
+| \s*(.*)/)?.[1]; | 1 |
 
----
-
-## 📂 Estrutura
-
-```bash
-leetcode/
-├── two-pointers/
-├── sliding-window/
-├── binary-search/
-├── trees/
-├── dynamic-programming/
-└── graphs/
-```
-
-Cada problema contém:
-
-* Enunciado resumido
-* Solução
-* Explicação (quando necessário)
 
 ---
 
-## 🛠 Tecnologias
+## 📚 Problemas Resolvidos
 
-* Java e C++
+<details>
+<summary>📂 Clique para expandir</summary>
 
----
+| # | Problema | Dificuldade | Padrões | Link |
+|--|----------|------------|--------|------|
+| 1 | \s*(.*)/)?.[1]; | undefined | \s*(.*)/)?.[1]; | [🔗](\s*(.*)/)?.[1];) |
+| 2 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/valid-palindrome/description/) |
 
-## 📌 Observações
+</details>
 
-Este repositório é focado em aprendizado. Algumas soluções podem não ser as mais otimizadas inicialmente, mas serão melhoradas com o tempo.
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.

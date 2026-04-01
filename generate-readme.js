@@ -51,8 +51,8 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
     const fullPath = path.join(dirPath, file);
 
     if (fs.statSync(fullPath).isDirectory()) {
-      // ignorar .git e node_modules
-      if (file === ".git" || file === "node_modules") return;
+      // ignorar pastas irrelevantes
+      if (file === ".git" || file === "node_modules" || file === ".github") return;
       getAllFiles(fullPath, arrayOfFiles);
     } else {
       arrayOfFiles.push(fullPath);
@@ -82,10 +82,31 @@ codeFiles.forEach(file => {
 
   if (!title || !difficulty) return;
 
-  // 🔥 pegar padrão pela pasta
+  // 🔥 detectar padrão pela pasta (CORRIGIDO)
   const parts = file.split(path.sep);
-  const folder = parts[0]; // ex: two-pointers
-  const folderPattern = normalizeFolderToPattern(folder);
+
+  const patternFolder = parts.find(p =>
+    [
+      "two-pointers",
+      "sliding-window",
+      "binary-search",
+      "trees",
+      "tree",
+      "dynamic-programming",
+      "dp",
+      "backtracking",
+      "greedy",
+      "graphs",
+      "graph"
+    ].includes(p.toLowerCase())
+  );
+
+  const folderPattern = normalizeFolderToPattern(patternFolder || "");
+
+  // fallback
+  if (!patternFolder && !tags) {
+    console.warn(`⚠️ Nenhum padrão encontrado para: ${file}`);
+  }
 
   const finalTags = tags || folderPattern;
 
