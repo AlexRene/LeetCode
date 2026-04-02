@@ -1,7 +1,7 @@
 # 📘 LeetCode Journey
 
 ## 📊 Progresso Geral
-Total resolvidos: 1 🚀
+Total resolvidos: 2 🚀
 
 
 ---
@@ -10,7 +10,7 @@ Total resolvidos: 1 🚀
 
 | Dificuldade | Resolvidos |
 |------------|-----------|
-| 🟢 Easy | 1 |
+| 🟢 Easy | 2 |
 | 🟡 Medium | 0 |
 | 🔴 Hard | 0 |
 
@@ -21,7 +21,7 @@ Total resolvidos: 1 🚀
 
 | Padrão | Resolvidos |
 |--------|-----------|
-| Two Pointers | 1 |
+| Two Pointers | 2 |
 | Sliding Window | 0 |
 | Binary Search | 0 |
 | Trees (DFS/BFS) | 0 |
@@ -40,7 +40,8 @@ Total resolvidos: 1 🚀
 
 | # | Problema | Dificuldade | Padrões | Link |
 |--|----------|------------|--------|------|
-| 1 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/valid-palindrome/description/) |
+| 1 | Remove duplicates from sorted array | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) |
+| 2 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/valid-palindrome/description/) |
 
 </details>
 
