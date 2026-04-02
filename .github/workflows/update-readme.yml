@@ -2,12 +2,9 @@ name: Update README
 
 on:
   push:
-    paths:
-      - '**/*.dart'
-      - '**/*.cpp'
-      - '**/*.js'
-      - '**/*.ts'
-      - '**/*.java'
+
+permissions:
+  contents: write
 
 jobs:
   update-readme:
@@ -15,12 +12,12 @@ jobs:
 
     steps:
       - name: Clonar repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Rodar script
         run: node generate-readme.js

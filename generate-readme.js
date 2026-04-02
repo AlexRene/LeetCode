@@ -63,13 +63,17 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
 }
 
 // 🔥 pegar arquivos de código
-const codeFiles = getAllFiles("./").filter(file =>
-  file.endsWith(".dart") ||
-  file.endsWith(".cpp") ||
-  file.endsWith(".js") ||
-  file.endsWith(".ts") ||
-  file.endsWith(".java")
-);
+const codeFiles = getAllFiles("./").filter(file => {
+  const validExtensions = [".dart", ".cpp", ".js", ".ts", ".java"];
+
+  const isValidExtension = validExtensions.some(ext => file.endsWith(ext));
+
+  const isNotScript = !file.includes("generate-readme.js");
+
+  const isInsideProblemFolder = file.includes(" - "); // padrão "125 - Nome"
+
+  return isValidExtension && isNotScript && isInsideProblemFolder;
+});
 
 // 🔥 processar arquivos
 codeFiles.forEach(file => {
@@ -80,7 +84,7 @@ codeFiles.forEach(file => {
   const tags = content.match(/@tags:\s*(.*)/)?.[1];
   const link = content.match(/@link:\s*(.*)/)?.[1];
 
-  if (!title || !difficulty) return;
+  if (!title || !difficulty || difficulty === "undefined") return;
 
   // 🔥 detectar padrão pela pasta (CORRIGIDO)
   const parts = file.split(path.sep);
