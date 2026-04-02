@@ -1,7 +1,7 @@
 # 📘 LeetCode Journey
 
 ## 📊 Progresso Geral
-Total resolvidos: 2 🚀
+Total resolvidos: 1 🚀
 
 
 ---
@@ -29,7 +29,6 @@ Total resolvidos: 2 🚀
 | Backtracking | 0 |
 | Greedy | 0 |
 | Graphs | 0 |
-| \s*(.*)/)?.[1]; | 1 |
 
 
 ---
@@ -41,8 +40,7 @@ Total resolvidos: 2 🚀
 
 | # | Problema | Dificuldade | Padrões | Link |
 |--|----------|------------|--------|------|
-| 1 | \s*(.*)/)?.[1]; | undefined | \s*(.*)/)?.[1]; | [🔗](\s*(.*)/)?.[1];) |
-| 2 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/valid-palindrome/description/) |
+| 1 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/valid-palindrome/description/) |
 
 </details>
 
