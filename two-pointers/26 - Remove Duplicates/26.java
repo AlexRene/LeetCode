@@ -1,3 +1,10 @@
+/*
+@title: Remove duplicates from sorted array
+@difficulty: Easy
+@tags: Two Pointers
+@link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+*/
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         int left = 1;
