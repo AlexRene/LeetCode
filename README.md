@@ -1,5 +1,7 @@
 # 📘 LeetCode Journey
 
+![Problems](https://img.shields.io/badge/Problems-4-blue) ![Easy](https://img.shields.io/badge/Easy-4-green) ![Medium](https://img.shields.io/badge/Medium-0-yellow) ![Hard](https://img.shields.io/badge/Hard-0-red)
+
 ## 📊 Progresso Geral
 Total resolvidos: 4 🚀
 
@@ -38,12 +40,12 @@ Total resolvidos: 4 🚀
 <details>
 <summary>📂 Clique para expandir</summary>
 
-| # | Problema | Dificuldade | Padrões | Link |
-|--|----------|------------|--------|------|
-| 1 | Remove duplicates from sorted array | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) |
-| 2 | Remove Element | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/remove-element/description/) |
-| 3 | Search Insert Position | 🟢 Easy | Binary Search | [🔗](https://leetcode.com/problems/search-insert-position/description/) |
-| 4 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://leetcode.com/problems/valid-palindrome/description/) |
+| # | Problema | Dificuldade | Padrões | Código |
+|--|----------|------------|--------|--------|
+| 1 | Remove duplicates from sorted array | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/blob/main/two-pointers/26 - Remove Duplicates/26.java) |
+| 2 | Remove Element | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/blob/main/two-pointers/27 - Remove Element/27.dart) |
+| 3 | Search Insert Position | 🟢 Easy | Binary Search | [🔗](https://github.com/AlexRene/LeetCode/blob/main/binary-search/35 - Search Insert Position/35.dart) |
+| 4 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/blob/main/two-pointers/125 - Valid Palindrome/125.dart) |
 
 </details>
 
