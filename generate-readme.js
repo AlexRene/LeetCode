@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const REPO_URL = "https://github.com/AlexRene/LeetCode";
+
 // 🔹 emojis
 const difficultyEmoji = {
   Easy: "🟢 Easy",
@@ -51,7 +53,6 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
     const fullPath = path.join(dirPath, file);
 
     if (fs.statSync(fullPath).isDirectory()) {
-      // ignorar pastas irrelevantes
       if (file === ".git" || file === "node_modules" || file === ".github") return;
       getAllFiles(fullPath, arrayOfFiles);
     } else {
@@ -67,10 +68,8 @@ const codeFiles = getAllFiles("./").filter(file => {
   const validExtensions = [".dart", ".cpp", ".js", ".ts", ".java"];
 
   const isValidExtension = validExtensions.some(ext => file.endsWith(ext));
-
   const isNotScript = !file.includes("generate-readme.js");
-
-  const isInsideProblemFolder = file.includes(" - "); // padrão "125 - Nome"
+  const isInsideProblemFolder = file.includes(" - ");
 
   return isValidExtension && isNotScript && isInsideProblemFolder;
 });
@@ -86,7 +85,7 @@ codeFiles.forEach(file => {
 
   if (!title || !difficulty || difficulty === "undefined") return;
 
-  // 🔥 detectar padrão pela pasta (CORRIGIDO)
+  // 🔥 detectar padrão pela pasta
   const parts = file.split(path.sep);
 
   const patternFolder = parts.find(p =>
@@ -107,18 +106,21 @@ codeFiles.forEach(file => {
 
   const folderPattern = normalizeFolderToPattern(patternFolder || "");
 
-  // fallback
   if (!patternFolder && !tags) {
     console.warn(`⚠️ Nenhum padrão encontrado para: ${file}`);
   }
 
   const finalTags = tags || folderPattern;
 
+  // 🔥 gerar link do GitHub
+  const githubLink = `${REPO_URL}/blob/main/${file.replace(/\\/g, "/")}`;
+
   problems.push({
     title,
     difficulty,
     tags: finalTags,
-    link
+    link,
+    githubLink
   });
 
   // dificuldade
@@ -136,6 +138,12 @@ codeFiles.forEach(file => {
 // ordenar
 problems.sort((a, b) => a.title.localeCompare(b.title));
 
+// 🔥 BADGES
+const totalBadge = `![Problems](https://img.shields.io/badge/Problems-${problems.length}-blue)`;
+const easyBadge = `![Easy](https://img.shields.io/badge/Easy-${difficultyCount.Easy}-green)`;
+const mediumBadge = `![Medium](https://img.shields.io/badge/Medium-${difficultyCount.Medium}-yellow)`;
+const hardBadge = `![Hard](https://img.shields.io/badge/Hard-${difficultyCount.Hard}-red)`;
+
 // 📚 tabela problemas
 let problemTable =
 `## 📚 Problemas Resolvidos
@@ -143,12 +151,12 @@ let problemTable =
 <details>
 <summary>📂 Clique para expandir</summary>
 
-| # | Problema | Dificuldade | Padrões | Link |
-|--|----------|------------|--------|------|
+| # | Problema | Dificuldade | Padrões | Código |
+|--|----------|------------|--------|--------|
 `;
 
 problems.forEach((p, i) => {
-  problemTable += `| ${i + 1} | ${p.title} | ${difficultyEmoji[p.difficulty]} | ${p.tags} | [🔗](${p.link || "#"}) |\n`;
+  problemTable += `| ${i + 1} | ${p.title} | ${difficultyEmoji[p.difficulty]} | ${p.tags} | [🔗](${p.githubLink}) |\n`;
 });
 
 problemTable += `\n</details>\n`;
@@ -186,6 +194,8 @@ Total resolvidos: ${problems.length} 🚀
 // 🧠 README final
 const readme =
 `# 📘 LeetCode Journey
+
+${totalBadge} ${easyBadge} ${mediumBadge} ${hardBadge}
 
 ${total}
 
