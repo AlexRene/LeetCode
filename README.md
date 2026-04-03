@@ -42,10 +42,10 @@ Total resolvidos: 4 🚀
 
 | # | Problema | Dificuldade | Padrões | Código |
 |--|----------|------------|--------|--------|
-| 1 | Remove duplicates from sorted array | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/tree/main/two-pointers/26 - Remove Duplicates/26.java) |
-| 2 | Remove Element | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/tree/main/two-pointers/27 - Remove Element/27.dart) |
-| 3 | Search Insert Position | 🟢 Easy | Binary Search | [🔗](https://github.com/AlexRene/LeetCode/tree/main/binary-search/35 - Search Insert Position/35.dart) |
-| 4 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/tree/main/two-pointers/125 - Valid Palindrome/125.dart) |
+| 1 | Remove duplicates from sorted array | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/tree/main/two-pointers/26%20-%20Remove%20Duplicates) |
+| 2 | Remove Element | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/tree/main/two-pointers/27%20-%20Remove%20Element) |
+| 3 | Search Insert Position | 🟢 Easy | Binary Search | [🔗](https://github.com/AlexRene/LeetCode/tree/main/binary-search/35%20-%20Search%20Insert%20Position) |
+| 4 | Valid Palindrome | 🟢 Easy | Two Pointers | [🔗](https://github.com/AlexRene/LeetCode/tree/main/two-pointers/125%20-%20Valid%20Palindrome) |
 
 </details>
 
