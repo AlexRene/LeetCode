@@ -113,7 +113,7 @@ codeFiles.forEach(file => {
   const finalTags = tags || folderPattern;
 
   // 🔥 gerar link do GitHub
-  const githubLink = `${REPO_URL}/blob/main/${file.replace(/\\/g, "/")}`;
+  const githubLink = `${REPO_URL}/tree/main/${file.replace(/\\/g, "/")}`;
 
   problems.push({
     title,
