@@ -112,8 +112,22 @@ codeFiles.forEach(file => {
 
   const finalTags = tags || folderPattern;
 
-  // 🔥 gerar link do GitHub
-  const githubLink = `${REPO_URL}/tree/main/${file.replace(/\\/g, "/")}`;
+  // gerar link do GitHub
+
+// caminho normalizado
+const normalizedPath = file.replace(/\\/g, "/");
+
+// remover o nome do arquivo → pegar só a pasta
+const folderPath = normalizedPath.substring(0, normalizedPath.lastIndexOf("/"));
+
+// encode (espaços → %20)
+const encodedPath = folderPath
+  .split("/")
+  .map(part => encodeURIComponent(part))
+  .join("/");
+
+// link final
+const githubLink = `${REPO_URL}/tree/main/${encodedPath}`;
 
   problems.push({
     title,
